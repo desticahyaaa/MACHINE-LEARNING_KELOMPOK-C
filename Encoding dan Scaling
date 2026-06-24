@@ -1,0 +1,25 @@
+from sklearn.preprocessing import StandardScaler
+
+# Memilih kolom numerik kontinu yang akan disesuaikan skalanya dari df_dropped
+# All feature columns in df_dropped should be numerical after label encoding
+kolom_numerik = df_dropped.drop('Price', axis=1).columns.tolist()
+
+# Membuat salinan DataFrame untuk menyimpan hasil standardisasi
+df_standardized = df_dropped.copy()
+
+# Menginisialisasi StandardScaler
+scaler = StandardScaler()
+
+# Menerapkan standardisasi ke kolom numerik yang dipilih
+df_standardized[kolom_numerik] = scaler.fit_transform(df_dropped[kolom_numerik])
+
+# Menampilkan hasil
+display(df_standardized[kolom_numerik].head())
+
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+categorical_cols = df_dropped.select_dtypes(include='object').columns
+for col in categorical_cols:
+    if col != 'customerID':
+        df_dropped[col] = le.fit_transform(df_dropped[col])
+df_dropped.head()
