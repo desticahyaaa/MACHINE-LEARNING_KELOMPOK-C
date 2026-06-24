@@ -1,0 +1,3 @@
+PENELAAHAN DATA
+a. Mengidentifikasi Tipe Data Setiap Fitur
+df.info()
