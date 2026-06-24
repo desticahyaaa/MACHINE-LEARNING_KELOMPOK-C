@@ -40,8 +40,7 @@ Informasi dataset:
 - Jumlah data: 2000 baris
 - Jumlah fitur: 16
 - Target: Price
-- Jenis masalah:
-  - Regresi 
+- Jenis masalah: Regresi
 
 ---
 
