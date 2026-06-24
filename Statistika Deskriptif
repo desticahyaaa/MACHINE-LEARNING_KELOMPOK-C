@@ -1,0 +1,3 @@
+b. Statistik Deskriptif
+df.describe()
+df.describe(include="object")
