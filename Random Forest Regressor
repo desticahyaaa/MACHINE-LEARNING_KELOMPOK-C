@@ -1,0 +1,41 @@
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import numpy as np
+
+# Initialize the Random Forest Regressor model
+rf_model = RandomForestRegressor(random_state=42)
+
+# Train the model using the training data
+print("\nTraining Random Forest Regressor...")
+rf_model.fit(X_train, y_train)
+
+# Make predictions on the test set using the Random Forest model
+y_pred_rf = rf_model.predict(X_test)
+
+print("\n--- Random Forest Regressor Performance ---")
+# Calculate R-squared for Random Forest
+r_squared_rf = r2_score(y_test, y_pred_rf);
+rmse_rf = np.sqrt(mean_squared_error(y_test, y_pred_rf))
+mse_rf = mean_squared_error(y_test, y_pred_rf)
+mae_rf = mean_absolute_error(y_test, y_pred_rf)
+
+print(f"Random Forest R-squared: {r_squared_rf:.4f}")
+print(f"Random Forest RMSE: {rmse_rf:.2f}")
+print(f"Random Forest MSE: {mse_rf:.2f}")
+print(f"Random Forest MAE: {mae_rf:.2f}")
+
+print("\nFeature Importances:")
+feature_importances = pd.DataFrame({'Feature': X.columns, 'Importance': rf_model.feature_importances_})
+display(feature_importances.sort_values(by='Importance', ascending=False))
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 7))
+sns.scatterplot(x=y_test, y=y_pred_rf, alpha=0.6)
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', lw=2) # Line for perfect prediction
+plt.xlabel('Actual Prices')
+plt.ylabel('Predicted Prices')
+plt.title('Actual vs. Predicted Prices (Random Forest Regressor)')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.show()
