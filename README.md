@@ -9,11 +9,11 @@ Project ini merupakan tugas akhir mata kuliah Machine Learning Kelas A yang bert
 Pada project ini dilakukan analisis data dan pembangunan model machine learning untuk memprediksi data menggunakan beberapa algoritma serta membandingkan performa model.
 
 ## Anggota Kelompok
-Desti Cahya Utami			K1D024009 
-Mukti Toifatul Istiqomah	  	K1D024021
-Muflihah Qurrota Ain Az’zahra	K1D024024
-Arya Daffa Pratama			K1D024033 
-Chindy Renita Listiyana		K1D024039
+1. Desti Cahya Utami			K1D024009
+2. Mukti Toifatul Istiqomah	  	K1D024021
+3. Muflihah Qurrota Ain Az’zahra	K1D024024
+4. Arya Daffa Pratama			K1D024033
+5. Chindy Renita Listiyana		K1D024039
 
 ---
 
