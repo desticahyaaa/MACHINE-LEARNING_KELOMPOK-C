@@ -1,0 +1,7 @@
+c. Visualisasi Data
+import seaborn as sns
+import matplotlib.pyplot as plt
+# Create a pairplot for the original df
+sns.pairplot(df, y_vars=['Price'], diag_kind='kde')
+plt.suptitle('Pairplot of Features vs. Price (Original Data)', y=1.02) # Adjust suptitle position
+plt.show()
