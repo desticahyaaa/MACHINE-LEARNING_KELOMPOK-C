@@ -12,6 +12,5 @@ Karakteristik Data:
 > Korelasi Fitur:
  Melalui visualisasi pairplot, ditemukan indikasi awal adanya korelasi positif yang cukup kuat antara fitur `Area` dan `Locality Rating` terhadap variabel target (`Price`)[cite: 1].
 
-> Insight:
-
+Insight:
  Tahap perumusan tujuan dan penelaahan data ini memberikan fondasi yang kuat mengenai struktur data, sehingga sangat membantu untuk menentukan strategi feature engineering dan pemodelan prediktif pada tahap selanjutnya.
