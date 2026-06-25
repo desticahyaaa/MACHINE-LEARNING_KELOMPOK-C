@@ -129,7 +129,3 @@ Karakteristik Data:
 
 Insight:
  Tahap perumusan tujuan dan penelaahan data ini memberikan fondasi yang kuat mengenai struktur data, sehingga sangat membantu untuk menentukan strategi feature engineering dan pemodelan prediktif pada tahap selanjutnya.
-
-## Catatan
-
-Project ini dibuat untuk memenuhi tugas akhir mata kuliah Machine Learning Kelas A.
